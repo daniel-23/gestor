@@ -1,0 +1,16 @@
+Instalacion del Gestor:
+
+1) Copie la carpeta gestor en su servidor web.
+2) Restaurar el archivo gestor.sql en el servidor de base de datos mysql.
+3) Modificar los datos de conexion a la base de datos en el archivo Conexion.php (Administrador/Modelo/Conexion.php") en las lineas 10, 11, 12 y 13.
+
+4) Ingresar a traves de un navegador a la ruta y listo.
+
+Ejemplo:
+"localhost/gestor" => Para el FrontEnd
+
+"localhost/gestor/Administrador" => Para el backend
+
+Al banckend ingresar con el 
+usuario: admin
+clave: 12345

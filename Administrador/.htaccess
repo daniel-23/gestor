@@ -1,0 +1,22 @@
+#Impedir que se vea el listado de contenidos de un direcctorio
+
+Options All -Indexes
+
+#TIEMPO DE DURACION DE LA SESION
+php_value session.gc_maxlifetime 7200
+php_value session.cookie_lifetime 7200
+
+
+#URL AMIGABLES
+
+#Activar RewriteEngine
+#para esto php debe tener el modulo mod_rewrite cargado
+
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f  
+RewriteRule ^(\w+)$ index.php?accion=$1
+RewriteRule ^(\w+)-(\w+)-(\w+)$ index.php?accion=$1&$2=$3
+
+#RewriteRule ^(\w+)-(\w+)-(\w+)$ index.php?accion=$1&$2=$3
+#RewriteRule ^(\w+)-(\w+)-(\w+)-(\w+)-(\w+)$ index.php?accion=$1&$2=$3&$4=$5
